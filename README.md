@@ -15,7 +15,11 @@ font family options
 https://developer.mozilla.org/en-US/docs/Web/CSS/font-family  
 
 
-color picker
+color picker  
 https://htmlcolorcodes.com/color-picker/
 
+
+
+html comment  
+<!-- Write your comments here -->
 

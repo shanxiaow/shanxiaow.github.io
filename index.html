@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanxiao Wang | Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- Write your comments here -->
+</head>
+    
+<body>
+    <div class="hero" id="top">
+      <h1>Shanxiao Wang</h1>
+      <p>PhD, Economics (Macro-Finance)</p>
+      <div class="contact-links">
+        <a href="mailto:shanxiaow@gmail.com">Email</a> ·
+        <a href="https://www.linkedin.com/in/shanxiao-wang-59303730/" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/shanxiaow" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+
+
+    
+    <!-- ===== TOP NAVIGATION ===== -->
+    <nav class="top-nav">
+      <a href="#stress-testing">Stress Testing Engine</a>
+      <a href="#booster-landing">Landing Prediction</a>
+      <a href="#other-projects">Additional Projects</a>
+      <a href="#resume">Resume &amp; Skills</a>
+    </nav>
+
+
+ <div class="container">
+     
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section id="featured" class="portfolio-section">
+    <h2 style="font-size: 35px;">Selected Work</h2>
+
+      <!-- ===== STRESS TESTING ENGINE (flagship) ===== -->
+      <div class="project-card" id="stress-testing">
+        <h3>Credit Stress-Testing Engine</h3>
+        
+        <p style="margin-top: 12px;">
+    An end-to-end credit stress-testing pipeline on LendingClub data that links loan-level
+    default risk to the macroeconomy: <strong>a PD model → macro satellite → scenario engine</strong>. It estimates
+    a fixed-horizon probability of default, calibrates it out-of-time to observed portfolio losses, isolates a
+    robust macro-to-loss transmission channel, and transmits historical recession paths into stressed
+    default and expected-loss figures.
+        </p>
+        <p style="margin-top: 8px;">
+        <strong>The project is model‑risk‑aware</strong>: the focus extends beyond predictive modeling and the final loss estimate to include 
+          leakage control, out‑of‑time validation, calibration, stability testing, and the diagnostic process that corrected an earlier flawed lifetime‑PD design 
+          to arrive at the final fixed‑horizon framework.
+        </p>
+
+      <section class="project-highlights" style="margin-top: 16px;">
+        <h4 style="margin-bottom: 10px;">Project Highlights</h4>
+
+        <ul style="padding-left: 30px;">
+    <li>
+      Built a leakage-safe <strong>24-month probability-of-default model</strong>. 
+      Validated the PD model on true out-of-time vintages, with
+      <strong>OOT AUC = 0.707</strong> and stable validation/OOT performance. 
+    </li>
+
+    <li>
+      Intercept recalibration reconciled predicted PD to the observed ~13.8% book default rate.
+    </li>
+
+    <li>
+      Built macro satellite model that estimates an actual-to-expected default
+      multiplier as a function of macro conditions. 
+      Isolated a significant, correctly-signed unemployment channel 
+      that is robust across five specifications that add credit spreads, GDP growth, and time trend.
+    </li>
+
+    <li>
+      <strong>Result: a +1 percentage point larger rise in unemployment
+      increases the A/E default multiplier by about 22.6%</strong>, stable across five specifications.
+    </li> 
+
+    <li>
+      Transmitted calm, adverse, and severely adverse stress paths through the satellite model, 
+      using historical unemployment paths from the 2001 recession and the 2008–09 GFC.
+    </li>
+
+    <li>
+      <strong>Result: a GFC-paced unemployment shock raises annual expected loss by
+      about 36%</strong>, or roughly
+      <strong>+$21.4 million per $1 billion of exposure</strong>, through the
+      unemployment channel alone.
+    </li>
+
+    <li>
+      <strong>Model-risk journey</strong>: an earlier terminal-status
+      lifetime-PD design generated a spurious late-window loss escalation, which was
+      traced to survivorship/truncation bias and corrected by rebuilding the outcome
+      definition around a fixed 24-month horizon.
+    </li>
+        </ul>
+      </section>
+
+
+<img src="https://github.com/shanxiaow/credit-stress-testing-engine/raw/main/legacy/figureL.1_multiplier_contrast.png"
+             alt="A/E multiplier: legacy spurious escalation vs. redesign stability"
+             style="width: 100%; max-width: 840px; border-radius: 6px;">
+
+
+        <div style="margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">scikit-learn</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">statsmodels</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Credit Risk</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">PD Modeling</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Stress Testing</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Model Risk</span>
+        </div>
+        <div style="margin-top: 20px; display: block;">
+    <div><a href="https://github.com/shanxiaow/credit-stress-testing-engine" target="_blank" style="color: #00B09A; font-weight: bold;">GitHub Repository →</a></div>
+    <div><a href="https://github.com/shanxiaow/credit-stress-testing-engine/blob/main/WRITEUP.md" target="_blank" style="color: #00B09A; font-weight: bold;">Full Technical Report (WRITEUP.md) →</a></div>
+    <div><a href="https://github.com/shanxiaow/credit-stress-testing-engine#readme" target="_blank" style="color: #00B09A; font-weight: bold;">Project Overview (README) →</a></div>
+        </div>
+      </div>
+<div style="height: 60px;"></div>
+
+        
+
+      <!-- ===== BOOSTER LANDING ===== -->
+        <div class="project-card" id="booster-landing">
+          <h3>Forecasting First-Stage Booster Landing Success</h3>
+            
+            <img src="/projects/booster/images/map.png"
+             alt="SpaceX project preview: interactive map"
+             style="width: 100%; max-width: 360px; border-radius: 6px; margin-top: 12px;">
+          <p style="margin-top: 12px;">
+    End-to-end machine learning pipeline predicting whether a first-stage space launch booster
+    will land successfully — a key driver of SpaceX's ~60% cost savings from booster reuse.
+          </p>
+          <ul style="margin-top: 14px; padding-left: 24px;">
+    <li>Collected launch data via SpaceX REST API and web scraping</li>
+    <li>Explored and wrangled data using SQL and visual analysis</li>
+    <li>Deployed a live Dash + Plotly dashboard on Hugging Face</li>
+    <li>Built interactive Folium maps analyzing launch site geography</li>
+    <li>Trained and compared Logistic Regression, SVM, Decision Tree, and KNN models</li>
+          </ul>
+          <div style="margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">scikit-learn</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Folium</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">SQL</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Dash</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Plotly</span>
+          </div>
+            <div style="margin-top: 20px; display: block;">
+          <div><a href="https://shanxiaow.github.io/forecasting-first-stage-booster-landing-success/" style="color: #00B09A; font-weight: bold;">View Project →</a></div>
+          <div><a href="https://huggingface.co/spaces/shannymonte/SpaceLaunchDashboard" target="_blank" style="color: #00B09A; font-weight: bold;">Live Dashboard →</a></div>
+          <div><a href="https://shanxiaow.github.io/forecasting-first-stage-booster-landing-success/InteractiveFoliumMap/map_railway.html" target="_blank" style="color: #00B09A; font-weight: bold;">Interactive Map Example: Distance to Closest Infrastructure →</a></div>
+          <div><a href="https://github.com/shanxiaow/ForecastingFirstStageBoosterLandingSuccess" target="_blank" style="color: #00B09A; font-weight: bold;">GitHub →</a></div>
+            </div>
+        </div>
+     
+    </section>    
+
+
+     
+
+    <!-- ===== OTHER PROJECTS ===== -->
+    <section id="other-projects" class="portfolio-section">
+    <h2 style="font-size: 35px;">Additional Projects</h2>
+
+    <div class="project-card">
+      <h3>Credit Card Fraud Detection</h3>
+      <img src="https://raw.githubusercontent.com/shanxiaow/Fraud-Detection/main/roc_curve.png"
+       alt="ROC Curve comparing Decision Tree and SVM"
+       style="width: 100%; max-width: 360px; border-radius: 6px; margin-top: 10px; margin-bottom: 12px;">
+      <p>
+    Binary classification for rare-event financial risk detection — modeling fraudulent transactions on a severely
+    imbalanced dataset (0.172% positive class). The same methodological challenges (class imbalance, threshold
+    selection, AUC-based evaluation) underpin credit default and PD modeling.
+      </p>
+      <ul style="margin-top: 14px; padding-left: 24px;">
+        <li>Addressed severe class imbalance via sample weighting and balanced class settings — central to default and fraud risk modeling</li>
+        <li>Stratified train/test split with feature standardization and L1 normalization</li>
+        <li>Compared Decision Tree and SVM classifiers; evaluated with ROC-AUC, the standard metric for imbalanced credit-risk problems</li>
+        <li>Results: Decision Tree AUC 0.966, SVM AUC 0.984, with explicit attention to the cost asymmetry of false negatives</li>
+      </ul>
+      <div style="margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">scikit-learn</span>
+          <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Imbalanced Classification</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">ROC-AUC</span>
+      </div>
+      <div style="margin-top: 14px; display: block;">
+        <div><a href="https://github.com/shanxiaow/Fraud-Detection" target="_blank" style="color: #00B09A; font-weight: bold; font-size: 18px;">View on GitHub →</a></div>
+      </div>
+    </div>
+    <div style="margin-top: 60px;"></div>
+
+
+
+
+
+    <div class="project-card">
+      <h3>Customer Churn Prediction </h3>
+      <p>
+    Logistic regression model predicting customer churn: a calibrated probability of a binary adverse event, evaluated on discrimination
+    and interpreted through coefficients and odds ratios, exactly as credit scorecards are built and validated.
+      </p>
+      <ul style="margin-top: 14px; padding-left: 24px;">
+        <li>Built an end-to-end classifier: logistic regression with L2 regularization and stratified train/test split</li>
+        <li>Evaluated model discrimination using ROC-AUC, the standard metric in credit scoring</li>
+        <li>Interpreted churn drivers via coefficients and odds ratios — the direction-of-effect analysis central to model validation</li>
+        <li>Assessed probability calibration with log loss across multiple solvers</li>
+      </ul>
+      <div style="margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">scikit-learn</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Logistic Regression</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">PD Modeling</span>
+      </div>
+      <div style="margin-top: 14px; display: block;">
+        <div><a href="https://github.com/shanxiaow/Customer-Churn" target="_blank" style="color: #00B09A; font-weight: bold; font-size: 18px;">View on GitHub →</a></div>
+      </div>
+    </div>
+    <div style="margin-top: 60px;"></div>
+
+
+
+        
+        
+    <div class="project-card">
+      <h3>Diamond Price Predictor</h3>
+      <p>
+    Interactive ML app that predicts diamond prices based on physical and quality characteristics,
+    using a Random Forest Regression model trained on 50,000+ diamonds.
+      </p>
+      <ul style="margin-top: 14px; padding-left: 24px;">
+        <li>Full sklearn pipeline with StandardScaler and OneHotEncoder preprocessing</li>
+        <li>Random Forest Regressor with train/test split and performance evaluation</li>
+        <li>R² and RMSE scores displayed live in the app interface</li>
+        <li>Deployed as a live Gradio app on Hugging Face Spaces</li>
+      </ul>
+    <div style="margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">scikit-learn</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Random Forest</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Gradio</span>
+    </div>
+      <div style="margin-top: 14px; display: block;">
+      <div><a href="https://huggingface.co/spaces/shannymonte/DiamondPricePrediction" target="_blank" style="color: #cc5500; font-weight: bold;">Live Demo →</a></div>
+      </div>
+    </div>
+    <div style="margin-top: 60px;"></div>
+
+        
+
+    <div class="project-card">
+      <h3>NLP Demos: Sentiment &amp; Emotion Detection</h3>
+      <p>
+    Two interactive transformer-based NLP demos, each classifying arbitrary input text and visualizing model
+    confidence as a dynamic progress bar. Both are deployed as live Streamlit apps on Hugging Face Spaces.
+      </p>
+
+      <h4 style="margin-top: 16px; margin-bottom: 4px;">Sentiment Analysis</h4>
+      <ul style="margin-top: 4px; padding-left: 24px;">
+        <li>Fine-tuned DistilBERT model (distilbert-base-uncased-finetuned-sst-2-english)</li>
+        <li>Real-time positive/negative classification with confidence visualization</li>
+      </ul>
+      <div style="margin-top: 6px;">
+        <a href="https://huggingface.co/spaces/shannymonte/SentimentAnalysis" target="_blank" style="color: #cc5500; font-weight: bold;">Sentiment Analysis Live Demo →</a>
+      </div>
+
+      <h4 style="margin-top: 18px; margin-bottom: 4px;">Emotion Detection</h4>
+      <ul style="margin-top: 4px; padding-left: 24px;">
+        <li>Fine-tuned DistilRoBERTa model (j-hartmann/emotion-english-distilroberta-base)</li>
+        <li>Classifies text into seven emotions: joy, anger, sadness, fear, surprise, disgust, and neutral</li>
+      </ul>
+      <div style="margin-top: 6px;">
+        <a href="https://huggingface.co/spaces/shannymonte/EmotionDetection" target="_blank" style="color: #cc5500; font-weight: bold;">Emotion Detection Live Demo →</a>
+      </div>
+
+      <div style="margin-top: 14px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Transformers</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">DistilBERT</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">DistilRoBERTa</span>
+        <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Streamlit</span>
+      </div>
+    </div>
+
+    </section>
+
+
+
+
+     
+
+    <!-- ===== RESUME & SKILLS ===== -->
+    <section id="resume" class="portfolio-section">
+      <h2>Resume &amp; Skills</h2>
+        
+      <h3>Resume & Dissertation</h3>
+      <ul style="padding-left: 24px;">
+        <li><a href="docs/dissertation.pdf" style="color: #00B09A;"> PhD Dissertation: Essays on Wholesale Banking and the Macro-Economy </a></li>
+        <li> <a href="docs/CV.pdf" style="color: #00B09A;"> Resume</a> </li>
+      </ul>
+        
+      <h3>Skills</h3>
+      <ul style="padding-left: 24px;">
+      <li>Python, SQL, R</li>
+      <li>MATLAB, SAS, Stata </li>
+      <li>Quantitative Research, Mathematical and Statistical Modeling</li>
+      <li>Time Series, Econometrics, Forecasting</li>
+      <li>Machine Learning, NLP, LLMs / GenAI</li>
+      <li>Model Risk, Credit Risk, Stress Testing</li>
+      <li>Data Visualization, Dashboards, Geospatial Analysis</li>
+      <li>Data Cleaning, Management, and Workflow</li>
+       </ul>
+        
+    </section>
+
+     <div style="text-align: center; padding: 30px 0;">
+      <a href="#top" style="color: #009999; font-weight: bold; text-decoration: none;">↑ Back to top</a>
+    </div>
+     
+ </div>
+
+
+</body>
+</html>

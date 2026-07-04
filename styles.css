@@ -1,0 +1,162 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Font stacks (define once, reuse) ===== */
+:root {
+  --font-body: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-head:  Georgia, 'Times New Roman', serif;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;   /* controls how wide your content can get */
+  margin: 0 auto;     /* centers the container horizontally */
+  padding: 0 20px;    /* adds left/right breathing room */
+  background-color: #F5F7F9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* Body Styles */
+body {
+    font-family: var(--font-body);   
+    line-height: 1.6;
+    background-color: #0B1E3F;
+    color: #1a2634;                  /* dark near-black body text */
+    margin: 0;
+    padding: 0px;
+}
+
+/* Header styles */
+header {
+    background-color: #F9F3CC;
+    color: #4403BC;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {    /* entire nav bar */
+    background-color: #024543;  /* background color of nav bar */
+    text-align: center;
+    padding: 10px;
+}
+nav a {   /* styles each link inside the nav bar*/
+    color: #FFCF0F;
+    text-decoration: none;  /*Removes the underline from links*/
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;    /* makes it bold */
+    font-family: Georgia, 'Times New Roman', serif;
+}
+nav a:hover { /*styles links when the mouse hovers over them*/
+    text-decoration: underline;
+}
+
+
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+}
+section h2 {
+    color: #333;
+    font-size: 24px;
+    font-family: var(--font-head);
+    margin-bottom: 10px;
+}
+section p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.portfolio-section {
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+.project-card {
+    padding-top: 24px;    /* space at the top inside each card */
+}
+
+
+
+
+/* Section headers: "Selected Work", "Other Projects" */
+.portfolio-section h2 {
+    font-family: var(--font-head);
+    font-size: 34px;       /* larger than project titles (hierarchy) */
+    color: #009999;        /* subdued teal */
+    margin-bottom: 6px;
+}
+
+/* Project card headers/titles */
+.project-card h3 {
+    font-family: var(--font-head);
+    font-size: 29px;       /* bigger titles, still under the section header */
+    margin-bottom: 8px;
+}
+
+
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* ===== Banner ===== */
+.hero {
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* space for the text */
+  padding: 100px 20px; /*140px, 20px*/
+  /* center text */
+  text-align: center;
+  color: white;
+  position: relative;
+}
+/* dark overlay to make text readable */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.33); /* adjust darkness here */
+}
+.hero * {
+  position: relative; /* keeps text above overlay */
+}
+.hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 52px;
+}
+.hero p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 30px;
+}
+
+.contact-links {
+  margin-top: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+}
+.contact-links a {
+  color: #f2c329;   /* matches your gold nav accents */
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-links a:hover {
+  text-decoration: underline;
+}

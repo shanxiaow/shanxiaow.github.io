@@ -44,16 +44,17 @@
         <h3>Credit Stress-Testing Engine</h3>
         
         <p style="margin-top: 12px;">
-    An end-to-end credit stress-testing pipeline on LendingClub data that links loan-level
-    default risk to the macroeconomy: <strong>a PD model → macro satellite → scenario engine</strong>. It estimates
-    a fixed-horizon probability of default, calibrates it out-of-time to observed portfolio losses, isolates a
-    robust macro-to-loss transmission channel, and transmits historical recession paths into stressed
-    default and expected-loss figures.
+    An end-to-end consumer-credit stress-testing framework on LendingClub data that links loan-level
+    default risk to the macroeconomy through a <strong>PD model → macro satellite → scenario engine</strong>.
+    The project estimates and calibrates fixed-horizon probability of default, isolates a robust macro-to-loss
+    transmission channel, and translates historical recession paths into stressed default and expected-loss estimates.
         </p>
         <p style="margin-top: 8px;">
-        <strong>The project is model‑risk‑aware</strong>: the focus extends beyond predictive modeling and the final loss estimate to include 
-          leakage control, out‑of‑time validation, calibration, stability testing, and the diagnostic process that corrected an earlier flawed lifetime‑PD design 
-          to arrive at the final fixed‑horizon framework.
+        <strong>Model-risk-aware design:</strong> the workflow emphasizes leakage control, out-of-time validation,
+        calibration, specification stability, and diagnosis of an earlier lifetime-PD design affected by
+        survivorship/truncation bias. The scenario engine was subsequently refactored into a reusable Python pipeline
+        and deployed on <strong>AWS</strong>, using EC2 for model execution, S3 for prepared inputs and generated
+        artifacts, IAM role-based access, and boto3 for Python-to-S3 integration.
         </p>
 
       <section class="project-highlights" style="margin-top: 16px;">
@@ -111,8 +112,13 @@
 
         <div style="margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
     <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Python</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">pandas</span>
     <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">scikit-learn</span>
     <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">statsmodels</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">AWS EC2</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Amazon S3</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">IAM</span>
+    <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">boto3</span>
     <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Credit Risk</span>
     <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">PD Modeling</span>
     <span style="background:#e8f0fe; color:#1a56db; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Stress Testing</span>
